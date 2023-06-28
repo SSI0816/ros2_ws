@@ -75,7 +75,7 @@ private:
 
     cv::Mat cvframe = frame; // 변환시킨 mat 객체 저장
     //cv::threshold(cvframe, cvframe, 128, 255, cv::THRESH_BINARY);
-    cv::imshow("PI_CAM", cvframe); ; // 결과 영상 출력
+    cv::imshow("Pi_CAM", cvframe); ; // 결과 영상 출력
     cv::waitKey(1); // 키보드 값 입력 대기
   }
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr camera_subscriber_; // ensor_msgs::msg::Image 타입 변수 선언
