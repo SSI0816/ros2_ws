@@ -5,8 +5,8 @@
 #include <utility> // 헤더파일 포함
 #include <sstream> // 헤더파일 포함
 #include "opencv2/opencv.hpp" // 헤더파일 포함
-#include "rclcpp/rclcpp.hpp" // 헤더파일 포함
-#include "sensor_msgs/msg/image.hpp" // 헤더파일 포함 
+#include "rclcpp/rclcpp.hpp" // 헤더파일 포함 
+#include "sensor_msgs/msg/image.hpp" // 헤더파일 포함
 #include "linetracer_ros2/camera.hpp" // 헤더파일 포함
 
 /// Convert an OpenCV matrix encoding type to a string format recognized by sensor_msgs::Image.
@@ -29,6 +29,7 @@ std::string mat_type2encoding(int mat_type) // 인코딩 타입인 mat_type이 �
         throw std::runtime_error("Unsupported encoding type"); // 지원되지 않는 인코딩 타입 메세지 출력
     }
 }
+
 
 /// Convert an OpenCV matrix (cv::Mat) to a ROS Image message.
 /**
@@ -83,3 +84,4 @@ int encoding2mat_type(const std::string& encoding) // sensor_msgs::Image의 인�
         throw std::runtime_error("Unsupported encoding type"); // 지원되지 않는 인코딩 타입 메세지 출력
     }
 }
+
